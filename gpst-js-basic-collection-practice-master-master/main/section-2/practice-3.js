@@ -1,8 +1,8 @@
 'use strict';
 
 module.exports = function countSameElements(collection) {
-  var A = [];
-	 var B = [];
+   var collectionA = [];
+	 var collectionB = [];
      for(var i = 0; i < collection.length;)
      {
          var count = 0;
@@ -17,46 +17,48 @@ module.exports = function countSameElements(collection) {
          if(collection[i].indexOf('-') > 0){
              map['key'] = collection[i].split("-")[0];
              map['count'] = parseInt(collection[i].split("-")[1]);
-                        A.push(map);
+             collectionA.push(map);
              i ++;
              continue;
          } else if(collection[i].indexOf('[') > 0){
              map['key'] = collection[i].split("[")[0];
              map['count'] = parseInt(collection[i].split("[")[1]);
-                        A.push(map);
+             collectionA.push(map);
              i ++;
              continue;
          } else if(collection[i].indexOf(':') > 0){
 	         map['key'] = collection[i].split(":")[0];
 	         map['count'] = parseInt(collection[i].split(":")[1]);
-	                      A.push(map);
+	         collectionA.push(map);
 	         i ++;
 	         continue;
          }
          map["key"] = collection [i];
          map["count"] = count;
-                        A.push(map);
+         collectionA.push(map);
          i += count;
      }
      
-     for(var i = 0;i < A.length; ){
+     for(var i = 0;i < collectionA.length; ){
          var count = 0;
          var count1=0;
          var arr = {};
-         for(var j = i; j < A.length; j++)
+         for(var j = i; j < collectionA.length; j++)
          {
-             if (A[i]['key'] == A[j]['key'])
+             if (collectionA[i]['key'] == collectionA[j]['key'])
              {
                  count++;
-                 count1 += A[j]['count'];
+                 count1 += collectionA[j]['count'];
              }
          }
-         arr["name"] = A[i]['key'];
+         arr["name"] = collectionA[i]['key'];
          arr["summary"] = count1;
-         B.push(arr);
+         collectionB.push(arr);
          i += count;
      }
-     return B;
+     return collectionB;
+
+
 
 }
-
+© 2017 GitHub, Inc.
