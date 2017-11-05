@@ -12,8 +12,8 @@ console.log(result);
 				
 			}
       else {
-				console.log("未匹配！");
-				return -1;
+		console.log("未匹配！");
+			return -1;
 			}
 			
 		} 
@@ -25,7 +25,7 @@ console.log(result);
           	if(collection[i] == result[j].key)
                   {
                      	result[j].count++;
-                                	break;
+                               break;
                   }
           }
 		      }
