@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = function collectSameElements(collectionA, collectionB) {
- var result = new Array();
+ var result = new[];
        for(var i=0;i<collectionA.length;i++) 
               {
                 { 
