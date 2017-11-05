@@ -8,7 +8,7 @@ module.exports = function collectSameElements(collectionA, objectB) {
                   { 
                       if(collectionA[i].key==objectB.value[j])  
                       { 
-                         result.push(collectionA[i]); 
+                         result.push(collectionA[i].key); 
                          break; 
                       } 
                   }       
