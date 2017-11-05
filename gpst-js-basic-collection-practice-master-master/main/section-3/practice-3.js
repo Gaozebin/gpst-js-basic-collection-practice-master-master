@@ -1,27 +1,26 @@
 'use strict';
 
 module.exports = function createUpdatedCollection(collectionA, objectB) {
- var col = new Array();
-        console.log(collection);
+ var result = new Array();
 col.push({'key':'a','count':1});
-console.log(col);
-        for(var i = 1;i < collection.length;i++){
-                if(collection[i] != collection[i-1])
-                        col.push({'key':collection[i],'count':0});
-                for(var j = 0;j < col.length;j++) {
-                        if(collection[i] == col[j].key) {
-                                col[j].count++;
+console.log(result);
+        for(var i = 1;i < collectionA.length;i++){
+                if(collectionA[i] != collectionA[i-1])
+                        result.push({'key':collectionA[i],'count':0});
+                for(var j = 0;j < result.length;j++) {
+                        if(collectionA[i] == result[j].key) {
+                                result[j].count++;
                                 break;
                         }
                 }
         }
-	for(var i = 0;i < col.length;i++) {
+	for(var i = 0;i < result.length;i++) {
                 for(var j = 0;j < objectB.value.length;j++) {
-                        if(col[i].key == objectB.value[j])
-                                col[i].count -= parseInt(col[i].count/3);
+                        if(result[i].key == objectB.value[j])
+                                result[i].count -= parseInt(result[i].count/3);
                                 console.log("-1s");
                 }
         }
-        console.log(col);
-        return col;
+        console.log(result);
+        return result;
 }	
