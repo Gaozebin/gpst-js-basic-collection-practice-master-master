@@ -1,4 +1,4 @@
-use strict';
+'use strict';
 
 module.exports = function collectSameElements(collectionA, collectionB) {
  var result = new Array();
