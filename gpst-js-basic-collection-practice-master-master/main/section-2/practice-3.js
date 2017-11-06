@@ -3,7 +3,7 @@
 module.exports = function countSameElements(collection) {
 	 var collectionA = [];
 	 var collectionB = [];
-     for(var i = 0; i < collection.length;)
+     for(var i = 0; i < collection.length;i++)
      {
          var count = 0;
          var map = {};
