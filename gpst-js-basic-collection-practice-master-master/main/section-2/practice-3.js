@@ -19,7 +19,7 @@ module.exports = function countSameElements(collection) {
              map['count'] = parseInt(collection[i].split("-")[1]);
              collectionA.push(map);
              i ++;
-             continue;
+             break;
          } else if(collection[i].indexOf('[') > 0){
              map['key'] = collection[i].split("[")[0];
              map['count'] = parseInt(collection[i].split("[")[1]);
