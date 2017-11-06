@@ -1,6 +1,7 @@
 'use strict';
+
 module.exports = function countSameElements(collection) {
-   var collectionA = [];
+	 var collectionA = [];
 	 var collectionB = [];
      for(var i = 0; i < collection.length;)
      {
