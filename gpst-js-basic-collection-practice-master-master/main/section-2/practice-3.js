@@ -1,5 +1,4 @@
 'use strict';
-
 module.exports = function countSameElements(collection) {
    var collectionA = [];
 	 var collectionB = [];
@@ -61,4 +60,3 @@ module.exports = function countSameElements(collection) {
 
 
 }
-© 2017 GitHub, Inc.
